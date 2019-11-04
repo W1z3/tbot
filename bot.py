@@ -1,5 +1,6 @@
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 import logging
+import config
 
 
 
@@ -10,7 +11,7 @@ logging.basicConfig(format='[%(asctime)s] [%(levelname)s]: %(message)s',
                     )
 
 def main():
-    bot = Updater('1027387265:AAGoKkRBl04IFFneRDRKcsh7H7rZIAGLOns')
+    bot = Updater(config.API_TOKEN)
     logging.info("Bot is starting...")
 
     dp = bot.dispatcher
